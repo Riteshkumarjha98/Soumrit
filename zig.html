@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+      .main{ 
+         height: 100%;
+        width: 80%;
+        margin: auto;
+        border: 1px solid red;
+        background-color: white;
+       
+    
+
+      }
+      #container {
+      
+        display: grid;
+        grid-template-columns: repeat(4, 120px);
+        grid-template-rows: repeat(3, 120px);
+        gap: 40px;
+        justify-content: center;
+        margin-top: 50px;
+      
+       
+      
+
+        grid-template-areas:
+        "A B B D"
+        "E E G H"
+        "I J L L"
+        
+     }
+
+      #container > div {
+        /* border: 1px solid blue; */
+        justify-content: center;
+        border-radius: 10px;
+        
+        color: darkcyan;
+       
+       
+      }
+    
+
+      #container > div:nth-child(1) {
+        grid-area: A;
+      }
+
+      #container > div:nth-child(2) {
+        grid-area: B;
+      }
+
+      #container > div:nth-child(3) {
+        grid-area: C;
+      }
+
+      #container > div:nth-child(4) {
+        grid-area: D;
+      }
+      #container > div:nth-child(5) {
+        grid-area: E;
+      }
+      #container > div:nth-child(6) {
+        grid-area: F;
+      }
+      #container > div:nth-child(7) {
+        grid-area: G;
+      }
+      #container > div:nth-child(8) {
+        grid-area: H;
+      }
+      #container > div:nth-child(9) {
+        grid-area: I;
+      }
+      #container > div:nth-child(10) {
+        grid-area: J;
+      }
+      #container > div:nth-child(11) {
+        grid-area: K;
+      }
+      #container > div:nth-child(12) {
+        grid-area: L;
+      }
+      body{
+        background: black;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="main">
+    <div id="container">
+      <div>A</div>
+      <div>B</div>
+      <div> C</div>
+      <DIV>D</DIV>
+      <div>E</div>
+      <div>F</div>
+      <div>G</div>
+      <div>H</div>
+      <div>I</div>
+      <div>J</div>
+      <div>K</div>
+      <div>L</div>
+       </div>
+    </div>
+  </body>
+</html>

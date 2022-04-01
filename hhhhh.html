@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+    
+      #container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 120px);
+        grid-gap: 20px;
+        padding: 50px;
+        
+        
+     
+      grid-template-areas:
+        "a a a a"
+        "b c c c"
+        "d e e e"
+      }
+
+    
+
+      
+      #container > div {
+        display: grid;
+        cursor: pointer;
+        justify-content: baseline;
+        
+      }
+
+      .b{background-color: yellow;}
+
+      .b1{
+           background-color: red;
+       }
+      .b2{
+          background-color: green;}
+
+       .b3{ background-color: blue;}
+
+       .b4{
+           background-color: grey;}
+        
+     
+
+    
+
+      #container > div:nth-child(1) {
+        grid-area: a;
+      }
+
+      #container > div:nth-child(2) {
+        grid-area: b;
+      }
+
+      #container > div:nth-child(3) {
+        grid-area: c;
+      }
+
+      #container > div:nth-child(4) {
+        grid-area: d;
+      }
+      #container > div:nth-child(5) {
+        grid-area: e;
+      }
+
+
+     
+      /* Medium screens */
+      @media only screen and (min-width: 450px) and (max-width: 750px) {
+       
+        
+       #container > div {
+         flex-direction: column;
+       }
+
+       #container {
+           
+        grid-template-columns: repeat(2, 200px);
+         grid-template-rows:repeat(2,200px);
+       }
+
+       #container > div {
+         padding: 20px;
+        
+        
+       }
+       
+     
+   }
+  
+       /* small screens */
+       @media only screen and (min-width: 70px) and (max-width: 450px) {
+       
+       #container > div {
+         flex-direction: column;
+       }
+
+       #container {
+         grid-template-rows:repeat(1, 200px);
+         grid-template-columns: repeat(1, 200px);
+       }
+
+       #container > div {
+         padding: 20px;
+       }
+   
+     }
+
+
+
+
+    </style>
+  </head>
+  <body>
+   <div id="container">
+            <div class="b"> </div>
+            <div class="b1"> BOX 1</div>
+            <div class="b2"> BOX 2</div>
+            <div class="b3"> BOX 3</div>
+            <div class="b4"> BOX 4</div>
+        </div>
+    </body>
+</html>
